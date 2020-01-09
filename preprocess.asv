@@ -1,0 +1,7 @@
+function [new_image] = preprocess(image_path)
+    old_image = imread(image_path);
+    x = imresize(old_image,[256,25]);
+    x = rgb2gray(x);
+    x = x+50;
+    new_image = x;
+end
